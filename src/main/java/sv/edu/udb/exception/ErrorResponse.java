@@ -1,11 +1,13 @@
 package sv.edu.udb.exception;
 
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class ErrorResponse {
     private LocalDateTime timestamp;
     private int status;
@@ -13,3 +15,4 @@ public class ErrorResponse {
     private String message;
     private String path;
 }
+
