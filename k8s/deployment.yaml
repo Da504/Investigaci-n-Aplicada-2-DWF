@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producto-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: producto-app
+  template:
+    metadata:
+      labels:
+        app: producto-app
+    spec:
+      containers:
+        - name: producto-container
+          image: producto-app:v1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: producto-config

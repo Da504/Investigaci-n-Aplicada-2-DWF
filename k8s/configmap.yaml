@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: producto-config
+data:
+  SPRING_PROFILES_ACTIVE: "prod"
+  APP_MESSAGE: "Desplegado en el Cluster UDB"
